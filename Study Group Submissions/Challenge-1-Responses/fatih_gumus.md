@@ -42,8 +42,9 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-```yaml
+```
 
+**Production Application (`production-app.yaml`):**
 ```yaml
 # Production Manifest File
 apiVersion: apps/v1
@@ -72,4 +73,4 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-```yaml
+```
