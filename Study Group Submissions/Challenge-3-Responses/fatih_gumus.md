@@ -11,9 +11,7 @@ creating deployment manifest files with labels for dev and prod (matchLabels)
 ### Solution Details
 
 1. I generated 3 manifest files ```nginx-conf.yaml```, ```nginx-proxy-deploy.yaml```, and ``` nginx-svc.yaml```
-Then on the terminal run ```kubectl apply -f .``` 
-
-3. 
+Then on the terminal run ```kubectl apply -f .```
 
 ### Code Snippet for ConfigMap
 To create the configuration settings on the manifest file, i used the given code snippet. On the data block i used ```default.conf``` as it is the default configuration file for nginx. Then i used | for parsing multiline string.
@@ -35,7 +33,7 @@ data:
     }
 ```
 ### Code Snippet for Service object
-The service type must be ```ClusterIP``` and on labels attribute the given key-value pair must match with the Deployment object's template label.
+The service type must be ```ClusterIP``` and on labels attribute the given key-value pair ```app: nginx-proxy``` must match with the Deployment object's template label.
 ```yaml
 apiVersion: v1
 kind: Service
